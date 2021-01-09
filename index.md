@@ -25,3 +25,4 @@ Brief guide to class layout:
 
 Curriculum and website designed by [Ashley Blewer](https://ashleyblewer.com).  
 
+![under construction]({{ site.baseurl }}/assets/img/construction.gif)
