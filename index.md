@@ -12,6 +12,9 @@ This site features a curriculum developed around the television series, [Halt an
 
 The intent is for this website to be used by self-forming small groups that want to create a "watching club" (like a book club) and discuss aspects of technology history that are featured in this series.
 
+There are 15 classes, for a "semester-long" course:  
+{% for post in site.classes %}~ <a href="{{ site.baseurl }}{{ post.url }}">#{{ post.number }}</a> {% endfor %}~
+
 Brief guide to class layout:
 - **Apéritifs** Casual viewing presented before gathering. This is entertainment; not required viewing.
 - **RFC as koan** A Request for Comments from the Internet Engineering Task Force, for reflecting on.
