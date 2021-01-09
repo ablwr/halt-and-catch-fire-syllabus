@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;700&display=swap');
+/* I should consolidate when done, the fonts into one call */
+
+
+$backgroundColor: #fffaf0;
+$bodyColor: #000000;
+$bodyFont: "Inconsolata", monospace;
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+  grid-template:
+  'header main nav';
+  grid-template-columns: 75px auto 75px;
+  grid-gap: 0.75em;
+  width: 100vw;
+  font-size: 20px;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(black, 0.15),
+    rgba(black, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: -1;
+}
+
+h1, nav {
+  font-family: "Red Rose";
+
+}
+
+header a {
+  text-decoration: none;
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+
+header, nav, main { height: 100vh; z-index: 2;}
+
+header, nav {
+  color: #1c3c0c;
+  background-color: #1c1c1a;
+  background: linear-gradient(to right, transparent, var(--c, rgba(49, 161, 49, 0.75))), repeating-linear-gradient(to right, var(--c, rgba(60, 204, 60, 0.75)) 0, var(--c, rgba(77, 198, 77, 0.75)) 2px, transparent 2px, transparent 4px);
+}
+
+
+header h1 {
+	text-orientation: upright;
+	writing-mode: sideways-lr;
+	text-transform: uppercase;
+  color: black;
+  font-size: 4.6vh;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-left: 0.2em;
+  padding-top: 1vh;
+}
+
+nav .class-list {
+	text-orientation: upright;
+	writing-mode: sideways-rl;
+	font-size: 2.5vh;
+  font-weight: 400;
+	padding: 0.1vh 0em 0.1vh 0.2em;
+  font-style: italic;
+  margin-left: 1vh;
+}
+
+nav .class-list:nth-child(1) {
+  padding-top: 1vh;
+}
+
+nav a, nav a:visited {
+	color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 0.5vh;
+}
+
+main {
+	grid-area: main;
+	display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 0.25fr auto;
+  grid-gap: 0.75em;
+  grid-template-areas:
+    "header header header"
+    "aperitifs rfc emulation"
+    "img themes readings"
+    "img prompts readings"
+    "description description img2"
+}
+
+main h1 { grid-area: header; }
+.aperitifs { grid-area: aperitifs; }
+.rfc { grid-area: rfc; }
+.emulation { grid-area: emulation; }
+.themes { grid-area: themes; }
+.readings { grid-area: readings; }
+.prompts { grid-area: prompts; }
+.description { grid-area: description; }
+.img { grid-area: img; overflow: hidden;}
+.img2 { grid-area: img2; overflow: hidden;}
+
+main h1 {
+	font-size: 2.5em;
+	margin: 4px;
+}
+
+.summaries {
+	float: right;
+	width: 6em;
+  border: 2px solid black;
+  margin: 0.5em;
+  padding: 0.2em;
+}
+
+.description .summaries p {
+  padding: 0;
+  margin: 0;
+}
+
+.img, .img2 {
+  display: grid;
+  align-content: center;
+}
+
+.img > *, .img2 > * {
+  margin: 0;
+  padding: 0;
+}
+
+.imgRef {
+  position: absolute;
+  background: antiquewhite;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.imgRef a, imgRef:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.img > p > img, .img2 > p > img {
+  height: auto;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.description p {
+  padding-left: 1.75em;
+  max-width: 40em;
+}
+
+
+main > div {
+  border: 2px solid black;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  padding-left: 0.3em;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  margin-bottom: 0.2vw;
+}
+
+h2 {
+  font-family: "Space Grotesk";
+}
+
+#index {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+
+#index img {
+  max-width: 20vw;
+}
+
+.aboutImg {
+  align-self: start;
+  padding-top: 10vw;
+  justify-self: center;
+}
+
+.aboutImg2 {
+  align-self: end;
+  padding-bottom: 10vw;
+  justify-self: center;
+}
+
+#about {
+  max-width: 600px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+}
+
+#about h1, #about h3 {
+  margin: 0;
+  font-family: "Space Grotesk";
+}
+
+#about p {
+  padding: 0;
+  margin: 0.4em;
+}
+
+
+
+@media all and (max-width: 800px) {
+  body {
+    display: grid;
+    grid-template: 'header' 'nav' 'main' ;
+    grid-template-columns: auto;
+    grid-template-rows: 0.25fr 0.25fr auto;
+    grid-gap: 0;
+  }
+  nav .class-list {
+    text-orientation: upright;
+    writing-mode: initial;
+  }
+  header h1 {
+    text-orientation: upright;
+    writing-mode: initial;
+    padding: 0;
+    font-size: 3.5vh;
+  }
+  header, nav, main { height: initial; z-index: 2;}
+  main {
+    display: block;
+    border: 0;
+  }
+  main div {
+    border: 0;
+    border-bottom: 2px solid black;
+  }
+  .img2, .summaries {
+    display: none;
+  }
+  #index {
+    grid-template-columns: auto;
+  }
+  #index img {
+    max-width: 100%;
+  }
+}
+
