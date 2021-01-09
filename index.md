@@ -1,6 +1,7 @@
 ---
 layout: about
 title: Halt and Catch Fire Syllabus
+permalink: "/"
 ---
 
 

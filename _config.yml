@@ -1,7 +1,7 @@
 title: Halt and Catch Fire Syllabus
 description: 
-baseurl: 
-url: http://bits.ashleyblewer.com/halt-and-catch-fire-syllabus
+baseurl: /halt-and-catch-fire-syllabus
+url: http://bits.ashleyblewer.com
 collections: 
   classes:
     output: true
