@@ -24,6 +24,7 @@ body {
   grid-gap: 0.75em;
   width: 100vw;
   font-size: 20px;
+  max-width:100%;
 }
 
 body::after {
@@ -53,6 +54,7 @@ header a {
 }
 
 header { grid-area: header; }
+main, #index { grid-area: main; }
 nav { grid-area: nav; }
 
 header, nav, main { height: 100vh; z-index: 2;}
@@ -199,11 +201,13 @@ h2 {
 
 #index {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-columns: auto 55% auto;
+  grid-gap: 0;
+  max-width: 90%;
 }
 
 #index img {
-  max-width: 28vw;
+  max-width: 22vw;
 }
 
 .aboutImg {
@@ -215,7 +219,7 @@ h2 {
 .aboutImg2 {
   align-self: end;
   padding-bottom: 10vw;
-  justify-self: center;
+  justify-self: left;
 }
 
 #about {
@@ -239,7 +243,7 @@ h2 {
 
 
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1000px) {
   body {
     display: grid;
     grid-template: 'header' 'nav' 'main' ;
