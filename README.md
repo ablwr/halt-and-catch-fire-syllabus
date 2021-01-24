@@ -2,6 +2,11 @@
 
 Repo for [this site](bits.ashleyblewer.com/halt-and-catch-fire-syllabus/)
 
+## Site information
+
+- Made with [Jekyll](https://jekyllrb.com/)
+- Images on Index/About page made monochrome using [DitherIt!](https://ditherit.com/)
+
 ## License
 
 Code: [MIT](https://opensource.org/licenses/MIT)
