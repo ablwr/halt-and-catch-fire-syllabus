@@ -1,6 +1,6 @@
 # Halt and Catch Fire Syllabus
 
-Repo for [this site](bits.ashleyblewer.com/halt-and-catch-fire-syllabus/)
+Repo for [this site](https://bits.ashleyblewer.com/halt-and-catch-fire-syllabus/)
 
 ## Site information
 
