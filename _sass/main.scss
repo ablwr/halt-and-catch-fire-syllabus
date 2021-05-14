@@ -67,8 +67,9 @@ header, nav {
 
 
 header h1 {
-	text-orientation: upright;
-	writing-mode: sideways-lr;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding-bottom: 1vh;
 	text-transform: uppercase;
   color: black;
   font-size: 4.6vh;
@@ -80,8 +81,7 @@ header h1 {
 }
 
 nav .class-list {
-	text-orientation: upright;
-	writing-mode: sideways-rl;
+  writing-mode: vertical-lr;
 	font-size: 2.5vh;
   font-weight: 400;
 	padding: 0.1vh 0em 0.1vh 0.2em;
@@ -257,6 +257,7 @@ h2 {
   }
   header h1 {
     text-orientation: upright;
+    transform: rotate(0deg);
     writing-mode: initial;
     padding: 0;
     font-size: 3.5vh;
